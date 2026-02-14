@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Clothes</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <h1>Add New Clothes</h1>
+        </header>
+
+        <div class="card">
+            <form onsubmit="saveCloth(); return false;">
+                <label>Cloth Type:</label>
+                <select id="type">
+                    <option value="Top">Top</option>
+                    <option value="Bottom">Bottom</option>
+                    <option value="Shoes">Shoes</option>
+                </select>
+
+                <label>Color:</label>
+                <input type="text" id="color" required placeholder="e.g. Red, Blue Pattern">
+
+                <label>Brand:</label>
+                <input type="text" id="brand" placeholder="e.g. Nike, Zara">
+
+                <label>Occasion:</label>
+                <select id="occasion">
+                    <option value="Casual">Casual</option>
+                    <option value="Formal">Formal</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Party">Party</option>
+                </select>
+
+                <label>Image:</label>
+                <!-- File Upload -->
+                <input type="file" id="imageFile" accept="image/*">
+                <!-- Fallback URL -->
+                <input type="text" id="imageUrl" placeholder="Or paste image URL">
+
+                <button type="submit" class="btn-action btn-blue">Save Cloth</button>
+            </form>
+        </div>
+
+        <button onclick="location.href='index.html'" class="btn-main btn-back">
+            ⬅ Back to Home
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

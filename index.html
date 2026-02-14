@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloth Matching & Outfit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body onload="initHome()">
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header>
+            <h1>Cloth Matching & Outfit Tracker</h1>
+            <div class="welcome-banner">Welcome, Sarah!</div>
+        </header>
+
+        <!-- Main Navigation -->
+        <div class="nav-buttons">
+            <button class="btn-main btn-blue" onclick="location.href='add_clothes.html'">
+                <span class="icon">👕</span> Add Clothes
+            </button>
+            <button class="btn-main btn-green" onclick="location.href='my_closet.html'">
+                <span class="icon">🚪</span> My Closet
+            </button>
+        </div>
+
+        <!-- Suggestion Card -->
+        <div class="card suggestion-card">
+            <h3>Today's Matching Suggestion:</h3>
+
+            <div class="match-display">
+                <div class="item-display" id="topDisplay">
+                    <!-- Javascript will inject content here -->
+                    <div class="placeholder-img">👕</div>
+                    <p class="item-name">Loading...</p>
+                </div>
+
+                <div class="match-arrow">
+                    <span class="match-text">Perfect<br>Match!</span>
+                    <span class="arrow-icon">➡</span>
+                </div>
+
+                <div class="item-display" id="bottomDisplay">
+                    <!-- Javascript will inject content here -->
+                    <div class="placeholder-img">👖</div>
+                    <p class="item-name">Loading...</p>
+                </div>
+            </div>
+
+            <div class="button-group" style="display: flex; gap: 10px; margin-top: 15px;">
+                <button class="btn-action btn-orange" style="flex: 2;" onclick="generateHomeMatch()">Get New
+                    Suggestion</button>
+                <button class="btn-action btn-orange"
+                    style="flex: 1; background: #ff758c; border-bottom-color: #d05b6f;"
+                    onclick="saveCurrentToFavorites()">❤️ Save</button>
+            </div>
+        </div>
+
+        <!-- Bottom Cards -->
+        <div class="bottom-cards">
+            <div class="card mini-card" onclick="location.href='outfit_history.html'">
+                <div class="icon-calendar">📅</div>
+                <h4>Outfit History</h4>
+                <p class="sub-text">Last Worn: 3 Days Ago</p>
+            </div>
+
+            <div class="card mini-card" onclick="location.href='favourites.html'">
+                <div class="icon-heart">❤️</div>
+                <h4>Favorites</h4>
+                <p class="sub-text">Saved Combinations</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

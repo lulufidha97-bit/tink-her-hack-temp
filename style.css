@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg-gradient: linear-gradient(180deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --text-primary: #5c3a3a;
+    --text-secondary: #885555;
+
+    /* Buttons */
+    --btn-blue-start: #4facfe;
+    --btn-blue-end: #00f2fe;
+    --btn-green-start: #9be15d;
+    --btn-green-end: #00e3ae;
+    --btn-orange-start: #ff9a7b;
+    --btn-orange-end: #ff6a4d;
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;
+    background-image: var(--bg-gradient);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--text-primary);
+    padding-bottom: 40px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 414px;
+    /* iPhone Max width approx */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.welcome-banner {
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: inline-block;
+    backdrop-filter: blur(5px);
+}
+
+/* Buttons */
+button {
+    border: none;
+    color: white;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.btn-main {
+    flex: 1;
+    height: 60px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-blue {
+    background: linear-gradient(to bottom, var(--btn-blue-start), var(--btn-blue-end));
+    border-bottom: 4px solid #2D73D2;
+}
+
+.btn-green {
+    background: linear-gradient(to bottom, var(--btn-green-start), var(--btn-green-end));
+    border-bottom: 4px solid #00c698;
+}
+
+.icon {
+    font-size: 1.4rem;
+}
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+/* Suggestion Card */
+.suggestion-card h3 {
+    margin-top: 0;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 10px;
+}
+
+.match-display {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.cloth-img,
+.placeholder-img {
+    width: 90px;
+    height: 110px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.placeholder-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #eee;
+}
+
+.item-name {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 5px 0 0 0;
+    font-weight: 600;
+}
+
+.match-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 0.9rem;
+    line-height: 1.1;
+}
+
+.arrow-icon {
+    font-size: 2rem;
+    margin-top: -5px;
+    color: #66bb6a;
+}
+
+.btn-action {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.btn-orange {
+    background: linear-gradient(to bottom, var(--btn-orange-start), var(--btn-orange-end));
+    border-bottom: 4px solid #e65100;
+}
+
+/* Bottom Cards */
+.bottom-cards {
+    display: flex;
+    gap: 15px;
+}
+
+.mini-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    background: white;
+}
+
+.mini-card:active {
+    transform: scale(0.96);
+}
+
+/* Colorful icons for bottom cards */
+.icon-calendar {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    /* Emoji fallback is good, or use an image/svg if wanted. Using CSS gradient text for "premium" feel if text, but emoji is standard here */
+}
+
+.icon-heart {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.mini-card h4 {
+    margin: 8px 0 5px 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.sub-text {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Forms */
+label {
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    margin: 5px 0 15px 0;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #fafafa;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #ff9a9e;
+    background: #fff;
+}
+
+/* Closet Grid */
+.closet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.cloth-card {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.cloth-card img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.cloth-card h3 {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.cloth-card p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 2px 0;
+}
+
+.delete-btn {
+    margin-top: 10px;
+    background: #ff6b6b;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+/* Back Button */
+.btn-back {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    margin-top: 20px;
+}
+
+.btn-back:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
